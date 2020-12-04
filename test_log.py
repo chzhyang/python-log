@@ -17,12 +17,12 @@ stream_handler = logging.StreamHandler()
 stream_handler.setLevel(logging.DEBUG)
 stream_handler.setFormatter(formatter)
 # 以天（'D'）为周期进行日志分割，分、秒分别是M S
-time_rotating_file_handler = handlers.TimedRotatingFileHandler(filename='rotating_test.log', when='D')
-time_rotating_file_handler.setLevel(logging.DEBUG)
-time_rotating_file_handler.setFormatter(formatter)
+# time_rotating_file_handler = handlers.TimedRotatingFileHandler(filename='rotating_test.log', when='D')
+# time_rotating_file_handler.setLevel(logging.DEBUG)
+# time_rotating_file_handler.setFormatter(formatter)
 # 加载handler
 logger.addHandler(file_handler)
 logger.addHandler(stream_handler)
-logger.addHandler(time_rotating_file_handler)
+# logger.addHandler(time_rotating_file_handler)
 
-logger.info('is it ok?')
+logger.info('hh_{:.3f}_hh'.format(10.0))
